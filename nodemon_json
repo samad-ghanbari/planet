@@ -1,0 +1,6 @@
+{
+  "watch": ["src", "routes"],
+  "ext": "js,ts,svelte",
+  "exec": "npm run start"
+}
+
