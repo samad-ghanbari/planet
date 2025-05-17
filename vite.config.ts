@@ -5,7 +5,10 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	server: {
-			port: 8080,
-			host: 'localhost'
-		}
+		port: 8080,
+		host: 'localhost'
+	},
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js', '.json'] // Ensure .ts files are included
+	}
 });

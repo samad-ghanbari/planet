@@ -1,27 +1,16 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
-	 
-	 	"target": "ESNext",                // Use ESNext for modern JavaScript features
-    		"module": "ESNext", 
-    		"moduleResolution": "node",
-    
-		"allowJs": true,
-		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true
-		
+		"target": "es6", // Use modern JavaScript features
+		"module": "commonJs", // Use CommonJS module system (default for Node.js)
+		"esModuleInterop": true, // Enable compatibility between CommonJS and ES Modules
+		"strict": true, // Enable strict type checking
+		"skipLibCheck": true, // Skip type checking of declaration files (for speed)
+		"outDir": "./dist", // Output compiled files in the dist folder
+		"rootDir": "./src", // Root directory for TypeScript files
+		"resolveJsonModule": true, // Allow importing JSON files
+		"declaration": true, // Generate declaration files
+		"declarationDir": "./dist/types" // Directory for the declaration files
 	},
-	
-	"include": ["src/**/*.ts"],  
-	"exclude": ["node_modules"]
-	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
-	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files
-	//
-	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
-	// from the referenced tsconfig.json - TypeScript does not merge them in
+	"include": ["src/**/*"], // Include all TypeScript files in src folder
+	"exclude": ["node_modules"] // Exclude node_modules from compilation
 }
